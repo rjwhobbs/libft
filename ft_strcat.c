@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 06:50:36 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 06:50:45 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/23 08:18:25 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/23 09:06:09 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <string.h>
 
-void	ft_putstr(char const *s)
-{	
-	if (s == NULL)
-		write(1, "(null)", 6);
-	else
-		while(*s)
-			write(1, s++, 1);
+char	*ft_strcat(char *s1, const char *s2)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i++;
+	while (s2[j])
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }
+
+
 

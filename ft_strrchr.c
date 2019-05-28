@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 06:50:36 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 06:50:45 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/24 10:44:32 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/24 11:17:00 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 #include <string.h>
 
-void	ft_putstr(char const *s)
-{	
-	if (s == NULL)
-		write(1, "(null)", 6);
-	else
-		while(*s)
-			write(1, s++, 1);
+char    *ft_strrchr(const char *s, int c)
+{
+	int slen; 
+	
+	slen = ft_strlen(s);
+	while (slen >= 0)
+	{
+		if (s[slen] == (char)c)
+			return ((char *)&s[slen]);
+		slen--;
+	}
+	return (NULL);
 }
-

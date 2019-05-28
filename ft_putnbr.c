@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 06:50:36 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 06:50:45 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/21 10:39:08 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/21 11:52:37 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <string.h>
 
-void	ft_putstr(char const *s)
-{	
-	if (s == NULL)
-		write(1, "(null)", 6);
-	else
-		while(*s)
-			write(1, s++, 1);
+void	ft_putnum(int x)
+{
+	if (x < 0)
+	{
+		ft_putchar('-');
+		x = x * (-1);
+	}
+	if (x > 9)
+	{
+		ft_putnum(x / 10);
+		ft_putnum(x % 10);
+	}
+	else if (x < 10)
+	{
+		ft_putchar(x + '0');
+	}
 }
-

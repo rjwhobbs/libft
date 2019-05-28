@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 06:50:36 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 06:50:45 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/21 10:07:42 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/27 17:29:22 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 #include <string.h>
+#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char const *s)
-{	
-	if (s == NULL)
-		write(1, "(null)", 6);
-	else
-		while(*s)
-			write(1, s++, 1);
+int	main(int ac, char **av)
+{
+	int a; 
+//	int i;
+	char *s1;
+	ft_putendl(av[1]);
+//	i = ft_atoi(av[1]);
+	s1 = ft_memalloc(0);
+	ft_putendl(s1);
+
+	a = ac;
+
+	return (0);
 }
 
