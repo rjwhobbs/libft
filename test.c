@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:07:42 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/27 17:29:22 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/05/28 16:13:22 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 int	main(int ac, char **av)
 {
 	int a; 
-//	int i;
-	char *s1;
-	ft_putendl(av[1]);
-//	i = ft_atoi(av[1]);
-	s1 = ft_memalloc(0);
-	ft_putendl(s1);
+	int i;
 
 	a = ac;
+	i = ft_atoi(av[3]);
+
+	ft_putnbr(ft_memcmp(av[1], av[2], i));
+	ft_putchar('\n');
+	ft_putnbr(memcmp(av[1], av[2], i));
 
 	return (0);
 }

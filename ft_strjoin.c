@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 11:11:53 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 11:15:53 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/28 15:19:39 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/28 15:45:42 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putnbr(int x)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (x < 0)
- 	{
-		ft_putchar('-');
-		x = x * (-1);
-	}
-	if (x > 9)
-	{
-		ft_putnbr(x / 10);
-		ft_putnbr(x % 10);
-	}
-	else if (x < 10)
-	{
-		ft_putchar(x + '0');
-	}
- }
+	int i;
+	char *ns;
+
+	i = ft_strlen(s1) + ft_strlen(s2);
+	ns = (char*)malloc(sizeof(*ns) * (i - 1));
+	ns[i - 1] = '\0';
+	return (ns);
+}
+
+

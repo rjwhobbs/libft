@@ -3,26 +3,18 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-//void	memfun(void)
-//{
-//
-//}
-
-
-int	main(void)
+int	main(int ac, char **av)
 {
-	char *s1;
+	int a;
+	a = ac;
 
-	s1 = (char *)malloc(sizeof(*s1) * (4 + 1));
-	s1[0] = 't';
-	s1[1] = 't';
-	s1[2] = 't';
-	s1[3] = 't';
-	s1[4] = '\0';
+	void **p2;
+	void *p1;
 
-	write(1, s1, 5);
-	free(s1);
-	printf("%s\n", s1);
+	p1 = av[1];
+	p2 = &p1;
+	
+	printf("%s\n", *p2);
 
 	return (0);
 }
