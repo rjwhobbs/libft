@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   test_striter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 11:11:53 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/30 16:43:19 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/30 16:47:01 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/30 16:51:00 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putnbr(int n)
+void	rh_putstr(char *s)
 {
-	if (n < 0)
- 	{
-		ft_putchar('-');
-		n = n * (-1);
-	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else if (n < 10)
-	{
-		ft_putchar(n + '0');
-	}
- }
+	if (s == NULL)
+		write(1, "(null)", 6);
+	else
+		while(*s)
+			write(1, s++, 1);
+}
+
+int	main(int ac, char **av)
+{
+	int a;
+	a = ac;
+
+	ft_striter(av[1], rh_putstr);
+	return (0);
+}
+
+

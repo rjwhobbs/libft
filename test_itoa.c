@@ -8,6 +8,7 @@ int	main(int ac, char **av)
 	i = ft_atoi(av[1]);
 	a = ac;
 	ft_putendl(ft_itoa(i));
+	ft_putnbr(ft_strlen(ft_itoa(i)));
 	return (0);
 }
 
