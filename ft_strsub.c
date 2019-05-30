@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 15:19:39 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/29 09:51:57 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/29 07:55:02 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/29 08:39:46 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	int j;
-	char *ns;
+	char *ss;
+	size_t i;
 
-	j = 0;
-	i = ft_strlen(s1) + ft_strlen(s2);
-	if (!(ns = (char*)malloc(sizeof(*ns) * (i - 1))) || 
-			!*s1 || !*s2)
-		return (NULL);
-	while (s1[j])
-	{ 
-		ns[j] = s1[j];
-		j++;
-	}
 	i = 0;
-	while (s2[i])
+	if(!(ss = (char*)malloc(sizeof(*ss) * (len + 1))) ||
+			start > ft_strlen(s) || s == NULL)
+		return (NULL);
+	while(s[start + i] && i < len)
 	{
-		ns[j] = s2[i];
+		ss[i] = s[start + i];
 		i++;
-		j++;
 	}
-	ns[j] = '\0';
-	return (ns);
+	ss[i] = '\0';
+	return (ss);
 }
 
 

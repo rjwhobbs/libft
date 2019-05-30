@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 15:41:52 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/05/29 17:26:49 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ int		ft_isalpha(int c);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
+void    ft_strdel(char **as);
 int		ft_strcmp(const char *s1, const char *s2);
 int 	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnew(size_t size);
 int		ft_atoi(const char *str);
+char    *ft_itoa(int n);
 size_t  ft_strlen(const char *s);
 size_t  ft_strnlen(const char *s, size_t maxlen);
 char	*ft_strchr(const char *s, int c);
@@ -42,6 +44,7 @@ char    *ft_strcat(char *s1, const char *s2);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
 char    *ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
+char    *ft_strsub(char const *s, unsigned int start, size_t len);
 void    *ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
