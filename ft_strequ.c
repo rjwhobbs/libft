@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:15:29 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 11:04:31 by rhobbs           ###   ########.fr       */
+/*   Created: 2019/05/31 08:14:15 by rhobbs            #+#    #+#             */
+/*   Updated: 2019/05/31 08:43:20 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t	i;
-	char	*pdst;
-	char	*psrc;
-	
+	int i;
+
 	i = 0;
-	if (!dst || !src)
-		dst = (void*)src;
-	if ((!dst || !src) && n)
-		return (NULL);
-	pdst = (char *)dst;
-	psrc = (char *)src;
-	while (i < n )
-	{
-		pdst[i] = psrc[i];
+	if (!s1 || !s2)
+		return ((int)NULL);
+	while ((s1[i] && s2[i]) && (s1[i] == s2[i]))
 		i++;
-	}
-	return (dst);
+	if (!s1[i] && !s2[i])
+		return (1);
+	else
+		return (0);
 }
-
-

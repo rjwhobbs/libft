@@ -4,7 +4,7 @@ void	rh_putstr(unsigned int i, char *s)
 {
 	unsigned int j;
 
-	j = i;
+	j = 0;
 	if (s == NULL)
 		write(1, "(null)", 6);
 	else
