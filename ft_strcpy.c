@@ -6,17 +6,23 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:30:59 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/23 09:31:01 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/05/31 13:29:03 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, char *src)
+char	*ft_strcpy(char *dst,const char *src)
 {
-	while(*dst)
-		*dst++ = *src++;
-	*dst = '\0';
+	int i;
+
+	i = 0;
+	while(src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
 	return (dst);
 }

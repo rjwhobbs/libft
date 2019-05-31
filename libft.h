@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 08:32:35 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/05/31 16:45:55 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_strchr(const char *s, int c);
 char    *ft_strstr(const char *haystack, const char *needle);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
-char    *ft_strcpy(char *dst, char *src);
+char    *ft_strcpy(char *dst,const char *src);
 char    *ft_strncpy(char *dst, const char *src, size_t len);
 char    *ft_strcat(char *s1, const char *s2);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
