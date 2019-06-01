@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 15:46:57 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/01 15:47:12 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 16:57:16 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_strclr(char *s)
 {
 	int l;
 
-	l = ft_strlen(s);
-	ft_memset(s, '\0', l);
+	l = 0;
+	if (s)
+		l = ft_strlen(s);
+		ft_memset(s, '\0', l);
 }
