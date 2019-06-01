@@ -6,16 +6,13 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 06:46:58 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/28 06:47:10 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 15:36:53 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-

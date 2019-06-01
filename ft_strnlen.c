@@ -6,20 +6,18 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:03:57 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/23 11:26:03 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 16:25:52 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strnlen(const char *s, size_t maxlen)
 {
 	size_t i;
 
 	i = 0;
-	while(*s++ && i++ < maxlen)
+	while (*s++ && i++ < maxlen)
 		;
 	return (i);
 }
-

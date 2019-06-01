@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:43:54 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/23 07:44:37 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 16:22:24 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 
 	slen = (ft_strlen(src));
 	i = 0;
-	while (i < len && i < slen && src[i]) 
+	while (i < len && i < slen && src[i])
 	{
 		dst[i] = src[i];
 		i++;
@@ -31,6 +31,3 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	}
 	return (dst);
 }
-
-
-

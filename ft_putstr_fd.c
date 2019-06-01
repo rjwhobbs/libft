@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:36:04 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/30 15:47:13 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 15:43:56 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char const *s, int fd)
 	if (s == NULL)
 		write(fd, "(null)", 6);
 	else
-		while(*s)
+		while (*s)
 			write(fd, s++, 1);
 }

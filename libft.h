@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 16:45:55 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 15:07:04 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_strrchr(const char *s, int c);
 char    *ft_strcpy(char *dst,const char *src);
 char    *ft_strncpy(char *dst, const char *src, size_t len);
 char    *ft_strcat(char *s1, const char *s2);
+char	*ft_strdup(const char *s1);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
 char    *ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);

@@ -6,13 +6,13 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:43:54 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 15:09:31 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 16:35:11 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t 	wc(char const*s, char c)
+static size_t	wc(char const *s, char c)
 {
 	int wc;
 	int i;
@@ -32,7 +32,7 @@ static size_t 	wc(char const*s, char c)
 }
 
 static size_t	cc(char const *s, int i, char c)
-{	
+{
 	int j;
 
 	j = 0;
@@ -43,11 +43,11 @@ static size_t	cc(char const *s, int i, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char **split;
-	int i;
-	int words;
-	int charc;
-	int j;
+	char	**split;
+	int		i;
+	int		words;
+	int		charc;
+	int		j;
 
 	words = 0;
 	charc = 0;
@@ -67,4 +67,3 @@ char			**ft_strsplit(char const *s, char c)
 	}
 	return (split);
 }
-

@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:15:59 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 11:31:21 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/01 15:28:57 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		else if (psrc[i] == (unsigned char)c)
 		{
 			pdst[i] = psrc[i];
-			return (&dst[i+1]);
+			return (&dst[i + 1]);
 		}
 		i++;
 	}
