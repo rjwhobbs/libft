@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:35:16 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 13:51:19 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/03 17:50:15 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t srclen;
 	size_t dstlen;
-	
+	size_t srclen;
+	size_t bufflen;
+
+	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	dstlen = ft_strnlen(dst, dstsize);
-	if (dstlen == dstsize)
-		return (dstsize + srclen);
-	if (srclen < dstsize - dstlen)
-		ft_memcpy(dst+dstlen, src, srclen + 1);
-	else 
-		ft_memcpy(dst+dstlen, src, dstsize - 1);
-	return (dstlen + srclen);
+	bufflen = sizeof(dst);
+	if (bufflen == dstsize)
+	{
+		ft_strncat(dst, src, bufflen);
+		return (srclen + dstlen);
+	}
+	else if (dstsize < bufflen && dstlen >= dstsize)
+	{
+		ft_strncat(dst, src, dstsize);
+		return (srclen + dstlen);
+	}
+	else if (dstsize <= dstlen)
+		return (srclen + dstsize);
+	else
+		return (srclen + dstlen);
 }
-
-
-
-
-
-
