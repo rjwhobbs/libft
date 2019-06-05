@@ -1,22 +1,20 @@
+#include <stdio.h>
 #include "libft.h"
 #include <string.h>
-#include <unistd.h>
-#include <stdio.h>
 
-int	main(int ac, char **av)
+int		main(int argc, const char *argv[])
 {
-	int a;
-	int i;
-	size_t s;
-	char s2[8] = "fox";
-	char s1[3] = "cat";
+	char	*dest;
+	size_t	t;
 
-	a = ac;
-	i = ft_atoi(av[1]);
+	dest = (char *)malloc(sizeof(*dest) * 15);
+	memset(dest, 0, 15);
+	memset(dest, 'r', 6);
+	dest[11] = 'a';
+	t = strlcat(dest, "lorem", 15);
+	printf("%lu\n", t);
+	write(1, "\n", 1);
+	write(1, dest, 15);
 
-	s = strlcat(s2 ,s1 , i);
-	printf("%s\n", s2);
-	ft_putnbr(s);
-	ft_putchar('\n');
 	return (0);
 }
