@@ -14,7 +14,7 @@ int	main(int ac, char **av)
 	a = ac;
 	i = ft_atoi(av[1]);
 
-	s = strlcat(s2 ,s1 , i);
+	s = ft_strlcat(s2 ,s1 , i);
 	printf("%s\n", s2);
 	ft_putnbr(s);
 	ft_putchar('\n');

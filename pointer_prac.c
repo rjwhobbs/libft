@@ -1,19 +1,24 @@
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	int a;
-//	char *str = "foxes";
-	int i;
+	int a = 101;
+	int *pa;
+	int **ppa;
+	int *dppa;
+	int ddppa;
 
-	i = 0;
-	while (i < 3)
-	{
-		av[1][i] = a[2][i];
-		i++;
-	}
+	pa = &a;
+	printf("*pa %d\n", *pa);
+	ppa = &pa;
+	printf("**ppa %d\n", **ppa);
+	dppa = *ppa;
+	printf("*dppa %d\n", *dppa);
+	ddppa = *dppa;
+	printf("ddppa %d\n", ddppa);
 
-	a = ac;
-	printf("%s\n", av[1]);
+
+
+
 	return (0);
 }
