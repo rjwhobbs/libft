@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:43:54 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/05 12:55:36 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/06 12:24:47 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	wc(char const *s, char c)
 	wc = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] == c && s[i])
 			i++;
 		if (s[i] != c && (s[i]))
 			wc++;
@@ -31,14 +31,14 @@ static size_t	wc(char const *s, char c)
 	return (wc);
 }
 
-static size_t	cc(char const *s, int i, char c)
+static size_t	cc(char const *s, char c)
 {
-	int j;
+	int i;
 
-	j = 0;
-	while (s[i + j] != c && (s[i + j]))
-		j++;
-	return (j);
+	i = 0;
+	while (s[i] != c && (s[i]))
+		i++;
+	return (i);
 }
 
 char			**ft_strsplit(char const *s, char c)
@@ -55,17 +55,17 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	words = wc(s, c);
 	i = 0;
-	j = 0;
-	if (!(split = (char**)malloc(sizeof(char*) * words)))
+	j = -1;
+	if (!(split = (char**)malloc(sizeof(char*) * (words + 1))))
 		return (NULL);
-	while (j < words)
+	while (j++ < (words - 1))
 	{
 		while (s[i] == c)
 			i++;
-		charc = cc(s, i, c);
+		charc = cc(&s[i], c);
 		split[j] = ft_strsub(s, i, charc);
 		i += charc;
-		j++;
 	}
+	split[j] = NULL;
 	return (split);
 }
