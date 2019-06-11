@@ -6,7 +6,7 @@
 #    By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 07:32:20 by rhobbs            #+#    #+#              #
-#    Updated: 2019/06/10 11:08:32 by rhobbs           ###   ########.fr        #
+#    Updated: 2019/06/10 15:09:12 by rhobbs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = ./ft_isalnum.c ./ft_isprint.c ./ft_memchr.c ./ft_memmove.c\
 		./ft_putchar_fd.c ./ft_putnbr_fd.c ./ft_strchr.c ./ft_strdel.c\
 		./ft_striteri.c ./ft_strmap.c ./ft_strncpy.c ./ft_strnstr.c\
 		./ft_strsub.c ./ft_lstnew.c ./ft_lstdelone.c ./ft_lstadd.c\
-		./ft_lstdel.c ./ft_lstiter.c
+		./ft_lstdel.c ./ft_lstiter.c ./ft_lstmap.c
 
 OBJ = ./ft_isalnum.o ./ft_isprint.o ./ft_memchr.o ./ft_memmove.o\
 		./ft_putendl.o ./ft_putstr.o ./ft_strclr.o ./ft_strdup.o\
@@ -42,7 +42,7 @@ OBJ = ./ft_isalnum.o ./ft_isprint.o ./ft_memchr.o ./ft_memmove.o\
 		./ft_putchar_fd.o ./ft_putnbr_fd.o ./ft_strchr.o ./ft_strdel.o\
 		./ft_striteri.o ./ft_strmap.o ./ft_strncpy.o ./ft_strnstr.o\
 		./ft_strsub.o ./ft_lstnew.o ./ft_lstdelone.o ./ft_lstadd.o\
-		./ft_lstdel.o ./ft_lstiter.o
+		./ft_lstdel.o ./ft_lstiter.o ./ft_lstmap.o
 
 all: $(NAME)
 
