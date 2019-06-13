@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:25:13 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/05 11:01:12 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/11 11:21:52 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ void	*ft_memalloc(size_t size)
 
 	if (!(p = malloc(size)))
 		return (NULL);
-	else
-	{
-		ft_bzero(p, size);
-		return (p);
-	}
+	ft_bzero(p, size);
+	return (p);
 }
