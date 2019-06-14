@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/10 15:09:43 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/14 07:17:50 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ char				*ft_strnew(size_t size);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 size_t				ft_strlen(const char *s);
-size_t				ft_strnlen(const char *s, size_t maxlen);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *hay, const char *ndl, size_t len);

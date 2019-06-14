@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:31:11 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/05/31 08:42:58 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/14 07:11:42 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 
 	i = 0;
 	if (!s1 || !s2)
-		return ((int)NULL);
+		return (0);
 	while ((s1[i] && s2[i]) && (s1[i] == s2[i]) && i < n)
 		i++;
 	if ((!s1[i] && !s2[i]) || i == n)

@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:43:54 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/06 12:24:47 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/14 07:55:56 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static size_t	wc(char const *s, char c)
 	{
 		while (s[i] == c && s[i])
 			i++;
-		if (s[i] != c && (s[i]))
+		if (s[i] != c && s[i])
 			wc++;
-		while (s[i] != c && (s[i]))
+		while (s[i] != c && s[i])
 			i++;
 	}
 	return (wc);
@@ -36,7 +36,7 @@ static size_t	cc(char const *s, char c)
 	int i;
 
 	i = 0;
-	while (s[i] != c && (s[i]))
+	while (s[i] != c && s[i])
 		i++;
 	return (i);
 }
@@ -58,7 +58,7 @@ char			**ft_strsplit(char const *s, char c)
 	j = -1;
 	if (!(split = (char**)malloc(sizeof(char*) * (words + 1))))
 		return (NULL);
-	while (j++ < (words - 1))
+	while (++j < words)
 	{
 		while (s[i] == c)
 			i++;
