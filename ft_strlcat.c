@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:35:16 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/13 09:22:33 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/14 16:54:34 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	int			space;
 	int			i;
 
+	if (!dst || !src)
+		return (0);
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	space = dstsize - dstlen - 1;
