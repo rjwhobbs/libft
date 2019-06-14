@@ -6,7 +6,7 @@
 #    By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 07:32:20 by rhobbs            #+#    #+#              #
-#    Updated: 2019/06/10 15:09:12 by rhobbs           ###   ########.fr        #
+#    Updated: 2019/06/14 08:19:32 by rhobbs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC = ./ft_isalnum.c ./ft_isprint.c ./ft_memchr.c ./ft_memmove.c\
 		./ft_strsplit.c ./ft_tolower.c ./ft_atoi.c ./ft_isascii.c\
 		./ft_memalloc.c ./ft_memcpy.c ./ft_putchar.c ./ft_putnbr.c\
 		./ft_strcat.c ./ft_strcpy.c ./ft_striter.c ./ft_strlen.c\
-		./ft_strncmp.c ./ft_strnlen.c ./ft_strstr.c ./ft_toupper.c\
+		./ft_strncmp.c ./ft_strstr.c ./ft_toupper.c\
 		./ft_bzero.c ./ft_isdigit.c ./ft_memccpy.c ./ft_memdel.c\
 		./ft_putchar_fd.c ./ft_putnbr_fd.c ./ft_strchr.c ./ft_strdel.c\
 		./ft_striteri.c ./ft_strmap.c ./ft_strncpy.c ./ft_strnstr.c\
@@ -37,7 +37,7 @@ OBJ = ./ft_isalnum.o ./ft_isprint.o ./ft_memchr.o ./ft_memmove.o\
 		./ft_strsplit.o ./ft_tolower.o ./ft_atoi.o ./ft_isascii.o\
 		./ft_memalloc.o ./ft_memcpy.o ./ft_putchar.o ./ft_putnbr.o\
 		./ft_strcat.o ./ft_strcpy.o ./ft_striter.o ./ft_strlen.o\
-		./ft_strncmp.o ./ft_strnlen.o ./ft_strstr.o ./ft_toupper.o\
+		./ft_strncmp.o ./ft_strstr.o ./ft_toupper.o\
 		./ft_bzero.o ./ft_isdigit.o ./ft_memccpy.o ./ft_memdel.o\
 		./ft_putchar_fd.o ./ft_putnbr_fd.o ./ft_strchr.o ./ft_strdel.o\
 		./ft_striteri.o ./ft_strmap.o ./ft_strncpy.o ./ft_strnstr.o\

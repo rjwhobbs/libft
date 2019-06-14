@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:15:59 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/11 13:07:56 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/14 15:29:56 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
+	if (!dst || !src)
+		return (NULL);
 	i = 0;
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
