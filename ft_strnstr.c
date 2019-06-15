@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 06:54:50 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/14 07:15:32 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/15 08:01:53 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 	size_t		nlen;
 	int			i;
 
-	i = 0;
 	nlen = ft_strlen(ndl);
-	if (!ndl)
+	i = 0;
+	if (!hay)
+		return (NULL);
+	if (nlen == 0)
 		return ((char *)hay);
 	while ((hay[i]) && nlen <= (len - i))
 	{
