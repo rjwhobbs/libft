@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/14 07:17:50 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/17 07:41:51 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_nl(void);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_isdigit(int c);

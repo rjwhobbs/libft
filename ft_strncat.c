@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:11:04 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/14 17:00:38 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/17 13:27:44 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 
 	i = 0;
 	j = 0;
-	if (!s1 || !s2)
-		return (NULL);
 	while (s1[i])
 		i++;
 	n += i;
