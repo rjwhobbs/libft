@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:30:59 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/06/14 16:44:38 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/06/17 13:26:54 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strcpy(char *dst, const char *src)
 	int i;
 
 	i = 0;
-	if (!dst || !src)
-		return (NULL);
 	while (src[i])
 	{
 		dst[i] = src[i];
