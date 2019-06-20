@@ -6,11 +6,11 @@
 #    By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 07:32:20 by rhobbs            #+#    #+#              #
-#    Updated: 2019/06/17 07:43:36 by rhobbs           ###   ########.fr        #
+#    Updated: 2019/06/20 15:22:26 by rhobbs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = "libft.a"
+NAME = libft.a
 
 SRC = ./ft_isalnum.c ./ft_isprint.c ./ft_memchr.c ./ft_memmove.c\
 		./ft_putendl.c ./ft_putstr.c ./ft_strclr.c ./ft_strdup.c\
