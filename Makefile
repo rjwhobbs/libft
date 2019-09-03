@@ -6,7 +6,7 @@
 #    By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 07:32:20 by rhobbs            #+#    #+#              #
-#    Updated: 2019/08/28 10:26:01 by rhobbs           ###   ########.fr        #
+#    Updated: 2019/09/03 17:39:38 by RogerHobb        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC = ./ft_isalnum.c ./ft_isprint.c ./ft_memchr.c ./ft_memmove.c \
 		./ft_strsub.c ./ft_lstnew.c ./ft_lstdelone.c ./ft_lstadd.c \
 		./ft_lstiter.c ./ft_lstmap.c ./ft_nl.c ft_strrealloc.c \
 		./ft_print_hex.c ft_lstdel.c ft_memccpy.c \
-		./get_next_line.c
+		./get_next_line.c ./ft_arrstr.c
 
 OBJ = ./ft_isalnum.o ./ft_isprint.o ./ft_memchr.o ./ft_memmove.o \
 		./ft_putendl.o ./ft_putstr.o ./ft_strclr.o ./ft_strdup.o \
@@ -46,7 +46,7 @@ OBJ = ./ft_isalnum.o ./ft_isprint.o ./ft_memchr.o ./ft_memmove.o \
 		./ft_strsub.o ./ft_lstnew.o ./ft_lstdelone.o ./ft_lstadd.o \
 		./ft_lstiter.o ./ft_lstmap.o ./ft_nl.o ft_strrealloc.o \
 		./ft_print_hex.o ft_lstdel.o ft_memccpy.o \
-		./get_next_line.o
+		./get_next_line.o ./ft_arrstr.o
 
 all: $(NAME)
 
