@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 08:38:39 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/08/28 10:28:07 by rhobbs           ###   ########.fr       */
+/*   Updated: 2019/09/06 09:36:11 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int			temp_check(char **temp, char **line, int end)
 
 static int			buff_rw(char **temp, int fd)
 {
-	char		buff[BUFF_SIZE + 1];
+	char		buff[GNL_BUFF_SIZE + 1];
 	int			end;
 
 	end = 0;
@@ -49,7 +49,7 @@ static int			buff_rw(char **temp, int fd)
 		if (!(*temp = ft_strnew(0)))
 			return (-1);
 	if (!ft_strchr(*temp, '\n'))
-		while ((end = read(fd, buff, BUFF_SIZE)) > 0)
+		while ((end = read(fd, buff, GNL_BUFF_SIZE)) > 0)
 		{
 			buff[end] = '\0';
 			if (!(*temp = ft_strrealloc(*temp, buff)))

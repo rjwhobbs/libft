@@ -6,7 +6,7 @@
 /*   By: rhobbs <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:31:24 by rhobbs            #+#    #+#             */
-/*   Updated: 2019/09/03 17:40:28 by RogerHobb        ###   ########.fr       */
+/*   Updated: 2019/09/06 09:35:41 by rhobbs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# define BUFF_SIZE 1
+# define GNL_BUFF_SIZE 1
 
 typedef struct		s_list
 {
